@@ -18,7 +18,7 @@ app.post('/events', async (req: Request, res: Response): Promise<void> => {
             ModerationStatus.REJECTED :
             ModerationStatus.APPROVED;
 
-        await axios.post('http://event-bus-clusterip-srv:4005/events', {
+        await axios.post('http://event-bus-srv:4005/events', {
             type: 'CommentModerated',
             data: {
                 id: data.id,
